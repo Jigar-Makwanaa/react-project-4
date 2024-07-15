@@ -51,13 +51,13 @@
   text-shadow: 1px 1px 2px red;
 }
 
-.form-section .form .heading , .form-section .form .form-data{
+.form-section .form .heading , .form-section .form .form-data, .form-section .view-data{
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.form-section .form .heading .box, .form-section .form-data .div {
+.form-section .form .heading .box, .form-section .form-data .div, .form-section .view-data .div {
   width: 25%;
 }
 
@@ -79,7 +79,7 @@
   color: white;
 }
 
-.form-section .form .heading .box .add {
+.form-section .form-data .div button {
   color: green;
   background-color: white;
   border: 0px;
@@ -88,12 +88,12 @@
   border-radius: 5px;
 }
 
-.form-section .form .heading .box .add:focus {
+.form-section .form-data .div button:focus {
   background-color: green;
   color: white;
 }
 
-.form-section .form-data .div .remove {
+.form-section .view-data .div button {
   color: red;
   background-color: white;
   border: 0px;
@@ -102,33 +102,34 @@
   border-radius: 5px;
 }
 
-.form-section .form-data .div .remove:focus {
+.form-section .view-data .div button :focus {
   background-color: red;
   color: white;
 }
 
-.form-section .form-data .div input {
+.form-section .form-data .div input, .form-section .view-data .div input {
   padding: 8px 12px;
   border: 2px solid #d39f7a ;
   border-radius: 5px;
   outline: none;
 }
 
-.form-section .form-data .div input:focus {
+.form-section .form-data .div input:focus, .form-section .view-data .div input:focus {
   border: 2px solid #c15000;
 }
 
-.form-section .form-data {
+.form-section .form-data, .form-section .view-data  {
   padding: 10px 0px;
-}
-
-.form-section .form .heading {
-  border-bottom: 2px solid gray;
 }
 
 .form-section .form .heading h2 {
   color: teal;
 }
+
+form {
+  border-bottom: 2px solid gray;
+}
+
 
 
 /* dynamic form css end */
