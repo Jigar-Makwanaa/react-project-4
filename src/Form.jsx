@@ -12,15 +12,10 @@ const Form = () => {
         setInputFields(data);
     }
 
-
-    const addFields = () => {
+    const addFields = (e) => {
+        e.preventDefault();
         let newfield = { name: '', email: '', salary: '' }
         setInputFields([...inputFields, newfield])
-    }
-
-    const submit = (e) => {
-        e.preventDefault();
-        console.log(inputFields)
     }
 
     const removeFields = (index) => {
@@ -50,13 +45,12 @@ const Form = () => {
                                         <h2>Salary</h2>
                                     </div>
                                     <div className="box">
-                                        <button onClick={submit} className="done"><i class="fa-solid fa-check"></i></button>
                                         <button onClick={addFields} className="add"><i class="fa-solid fa-plus"></i></button>
                                     </div>
 
                                 </div>
 
-                                <form onSubmit={submit}>
+                                <form onSubmit={addFields}>
                                     {
                                         inputFields.map((input, index) => {
                                             if(index==0){
